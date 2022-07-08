@@ -1,8 +1,4 @@
-<LinkTo @route="cart" class="cart-link">
-  <i class="fa fa-shopping-cart"></i>
-</LinkTo>
-<main class="container mt-5">
-  <LinkTo @route="productdetail" @model="1">Product 1</LinkTo>
-  <LinkTo @route="productdetail" @model="2">Product 2</LinkTo>
-</main>
-<ProductList @products={{this.model}} />
+<GeneralContainer>
+<ProductList @products={{this.model}}/>
+</GeneralContainer>
+{{!-- <ProductList @products={{this.model}} /> --}}
