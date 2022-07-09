@@ -1,4 +1,8 @@
+
 <GeneralContainer>
-<ProductList @products={{this.model}}/>
+{{#each @model as |product|}}
+<ProductList @product={{product}}/>
+{{/each}}
+
 </GeneralContainer>
 {{!-- <ProductList @products={{this.model}} /> --}}

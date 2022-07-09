@@ -1,11 +1,12 @@
 {{page-title "Productdetail"}}
 <GeneralContainer>
 <div class="product item-details-page">
-  <Product::Image />
-  <Product::Details />
+  <Product::Image @src={{this.model.proimg}}/>
+  <Product::Details @pname={{this.model.pname}} @oprice={{this.model.oprice}} @cprice={{this.model.cprice}}/>
 </div>
 <h5 class="mt-5">Description</h5>
-<p>Tummy Trimmer Stomach And Weight Loss Equipment -Double Spring</p>
+<p>{{this.model.descriptions}}</p>
 
 </GeneralContainer>
-{{outlet}}
+
+

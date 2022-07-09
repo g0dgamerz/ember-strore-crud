@@ -1,8 +1,9 @@
 import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
 
 export default class ProductdetailRoute extends Route {
-  model(params) {
-    const { pid } = params;
-    return pid;
+  @service store;
+  model({ pid }) {
+    return this.store.find('product', pid);
   }
 }

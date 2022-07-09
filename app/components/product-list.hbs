@@ -3,7 +3,7 @@
  {{!-- <LinkTo @route="productdetail" @model={{product.pid}}>{{product.pname}}</LinkTo> --}}
 
 
-<LinkTo @route="productdetail" @model="1" class="product">
-<Product::Image/>
-<Product::Details/>
+<LinkTo @route="productdetail" @model={{@product.id}} class="product">
+<Product::Image @src={{@product.proimg}}/>
+<Product::Details @pname={{@product.pname}} @oprice={{@product.oprice}} @cprice={{@product.cprice}}/>
 </LinkTo>
