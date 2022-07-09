@@ -1,8 +1,8 @@
-<form onsubmit={{action this.handleCreate}} method="POST">
-  Product Name: <input type="text" value={{this.pname}} />
-  description: <input type="text" value={{this.descriptions}} />
-  Actual Price: <input type="number" value={{this.oprice}} />
-  Offered Price: <input type="number" value={{this.cprice}} />
-  proimg: <input type="text" value={{this.proimg}} />
+<form onsubmit={{action this.handleCreate}}>
+  Product Name: <Input @type="text" id="pname" @value={{this.pname}} />
+  description: <Input @type="text" @value={{this.descriptions}} />
+  Actual Price: <Input @type="number" @value={{this.oprice}} />
+  Offered Price: <Input @type="number" @value={{this.cprice}} />
+  proimg: <Input @type="text" @value={{this.proimg}} />
   <button type="submit">Create Product</button>
 </form>
