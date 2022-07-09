@@ -1,8 +1,8 @@
 {{page-title "Productdetail"}}
 <GeneralContainer>
-<div class="product item-details-page">
-  <Product::Image @src={{this.model.proimg}}/>
-  <Product::Details @pname={{this.model.pname}} @oprice={{this.model.oprice}} @cprice={{this.model.cprice}}/>
+<div class="product item-details-page {{if this.isZoomed 'is-zoomed'}}">
+  <Product::Image @src={{this.model.proimg}} @toggleZoom={{this.toggleZoom}}/>
+  <Product::Details @pname={{this.model.pname}} @oprice={{this.model.oprice}} @cprice={{this.model.cprice}} @isDetails={{true}}/>
 </div>
 <h5 class="mt-5">Description</h5>
 <p>{{this.model.descriptions}}</p>

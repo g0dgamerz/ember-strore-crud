@@ -13,8 +13,8 @@
   </section>
 
   {{!-- Price --}}
-  <section>
-    <del class="small text-black-50">{{@oprice}}</del>
-    <i class="text-danger font-weight-bold">{{@cprice}}</i>
+  <section class="{{unless @isDeatils 'h4'}}">
+    <del class="small text-black-50">{{currency @oprice}}</del>
+    <i class="text-danger font-weight-bold">{{currency @cprice}}</i>
   </section>
 </div>
