@@ -7,8 +7,9 @@ export default class ProductDetailsComponent extends Component {
 
   @action
   addToCart() {
-    const { pname, cprice } = this.args;
+    const { src, pname, cprice } = this.args;
     this.cart.addItem({
+      src,
       pname,
       cprice,
     });

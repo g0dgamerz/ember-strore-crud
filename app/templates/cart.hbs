@@ -12,7 +12,15 @@
   {{item.name}}
   {{/each}} --}}
   {{#each this.cart.itemList as |item|}}
-  <h1>{{item.pname}}, {{item.cprice}}</h1>
+  <div class="cart-item d-flex align-item-center">
+    <div class="cart-item-thumbnail">
+      <img src="{{item.src}}" alt="" width="200" height="150"/>
+    </div>
+    <div class="ml-3">
+      <h4>{{item.pname}}</h4>
+      <i class="font-weight-bold">{{currency item.cprice}}</i>
+    </div>
+  </div>
   {{/each}}
   <section class="w-50 ml-auto text-right mb-5">
     <div class="row">
