@@ -1,10 +1,35 @@
 import RESTSerializer from '@ember-data/serializer/rest';
 
 export default class ProductSerializer extends RESTSerializer {
-  serializeAttribute(snapshot, json, key, attributes) {
-    json.attributes = json.attributes || {};
-    super.serializeAttribute(snapshot, json.attributes, key, attributes);
+  serializeIntoHash(hash, typeClass, snapshot) {
+    hash[typeClass.modelName] = this.serialize(snapshot);
   }
+  serialize(snapshot) {
+    let serializedData = {};
+    snapshot.eachAttribute((name) => {
+      console.log(name);
+
+      serializedData[name] = snapshot.attr(name);
+    });
+    return serializedData;
+  }
+  // normalizeCreateRecordResponse(
+  //   store,
+  //   primaryModelClass,
+  //   payload,
+  //   id,
+  //   requestType
+  // ) {
+  //   payload = { product: payload };
+  //   console.log(payload);
+  //   return super.normalizeCreateRecordResponse(
+  //     store,
+  //     primaryModelClass,
+  //     payload,
+  //     id,
+  //     requestType
+  //   );
+  // }
   normalizeResponse(store, primaryModelClass, payload, id, requestType) {
     payload = { product: payload };
     console.log(payload);

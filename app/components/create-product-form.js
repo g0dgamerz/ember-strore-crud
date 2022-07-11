@@ -12,13 +12,14 @@ export default class CreateProductFormComponent extends Component {
   async handleCreate(event) {
     event.preventDefault();
     console.log(this.pname);
-    await this.store.createRecord('product', {
-      pname:"this.pname",
-      descriptions:"this.descriptions",
-      oprice:32,
-      cprice:21,
-      proimg:'this.proimg'
-    }).save();
+    const p = await this.store.createRecord('product', {
+      pname:this.pname,
+      descriptions:this.descriptions,
+      oprice:this.oprice,
+      cprice:this.cprice,
+      proimg:this.proimg
+    });
+    await p.save();
       //   let product = this.store.createRecord('product', {
   //     // eslint-disable-next-line prettier/prettier
   // "pname": this.pname,
