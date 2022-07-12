@@ -9,6 +9,18 @@ export default class ApplicationAdapter extends RESTAdapter {
   pathForType(product) {
     return product;
   }
+  updateRecord(store, type, snapshot) {
+    let data = {};
+    let serializer = store.serializerFor(type.modelName);
+    serializer.serializeIntoHash(data, type, snapshot);
+    // eslint-disable-next-line ember/no-jquery
+    return $.ajax({
+      type: 'PUT',
+      url: `${this.host}/${this.namespace}/${type.modelName}/getproductupdate/${snapshot.id}`,
+      data: JSON.stringify(data.product),
+      contentType: 'application/json',
+    });
+  }
   createRecord(store, type, snapshot) {
     let data = {};
     console.log(snapshot);

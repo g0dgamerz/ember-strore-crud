@@ -6,9 +6,10 @@ export default class ProductSerializer extends RESTSerializer {
   }
   serialize(snapshot) {
     let serializedData = {};
+    if (snapshot.id) {
+      serializedData.id = snapshot.id;
+    }
     snapshot.eachAttribute((name) => {
-      console.log(name);
-
       serializedData[name] = snapshot.attr(name);
     });
     return serializedData;

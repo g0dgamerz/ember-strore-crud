@@ -1,11 +1,24 @@
+<nav class="navbar navbar-dark bg-primary">
+  <LinkTo @route="index" class="navbar-brand">Nucleolus</LinkTo>
+
+  <div class="mx-auto">
+   <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+
+
+  </div>
 <LinkTo @route="cart" class="cart-link">
-  <i class="fa fa-shopping-cart"></i>
+  <i class="fa fa-calendar"></i>
   {{#if this.shoppingCart.itemList.length}}
   <span class="cart-count d-inline-flex justify-content-center align-item-center">
-    {{this.shoppingCart.itemList.length}}
+    {{this.itemCount}}
   </span>
   {{/if}}
 </LinkTo>
-<main class="container mt-5">
+</nav>
+
+<main class="container mt-5" >
 {{yield}}
 </main>

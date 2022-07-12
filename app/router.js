@@ -11,4 +11,5 @@ Router.map(function () {
   this.route('not-found', { path: '/*path' });
   this.route('cart', { path: 'shopping-cart' });
   this.route('createproduct');
+  this.route('productupdate', { path: '/getproductupdate/:pid' });
 });

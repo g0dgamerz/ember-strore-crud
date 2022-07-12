@@ -9,6 +9,8 @@ export default class CreateProductFormComponent extends Component {
   // oprice = '';
   // cprice = '';
   // proimg = '';
+
+
   async handleCreate(event) {
     event.preventDefault();
     console.log(this.pname);
@@ -20,6 +22,9 @@ export default class CreateProductFormComponent extends Component {
       proimg:this.proimg
     });
     await p.save();
+    location.replace("http://localhost:4200/");
+
+
       //   let product = this.store.createRecord('product', {
   //     // eslint-disable-next-line prettier/prettier
   // "pname": this.pname,

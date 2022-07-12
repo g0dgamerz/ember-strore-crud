@@ -1,12 +1,13 @@
-<main class="container mt-5">
-  <h1>Shopping Cart</h1>
+<GeneralContainer>
+<main class="container mt-5" style="display: inline">
+  <h1>Your Claims</h1>
   <ol class="breadcrumb">
     <li class="breadcrumb-item">
       <LinkTo @route="index">
         Home
       </LinkTo>
     </li>
-    <li class="breadcrumb-item">Shopping Cart</li>
+    <li class="breadcrumb-item">Your Claims</li>
   </ol>
   {{!-- {{#each this.shoppingCart.itemList as |item|}}
   {{item.name}}
@@ -20,6 +21,7 @@
       <h4>{{item.pname}}</h4>
       <i class="font-weight-bold">{{currency item.cprice}}</i>
     </div>
+    <input type="number" class="ml-auto" value={{item.count}} {{on "input" (fn this.updateItemCount item)}}>
   </div>
   {{/each}}
   <section class="w-50 ml-auto text-right mb-5">
@@ -32,12 +34,13 @@
       <span class="col">{{currency this.tax }}</span>
     </div>
     <div class="row">
-      <span class="col">Total</span>
+      <span class="col">Grand Total</span>
       <span class="col">{{currency this.total }}</span>
     </div>
   </section>
 
   <button type="button" class="btn btn-success float-right">
-    Check out
+    Claim Now
   </button>
 </main>
+</GeneralContainer>

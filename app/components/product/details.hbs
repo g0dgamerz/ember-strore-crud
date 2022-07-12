@@ -2,7 +2,7 @@
 
   {{!-- Header --}}
   <section>
-    <h3>{{@pname}}</h3>
+    <h5>{{@pname}}</h5>
     <div class="text-warning">
       <i class="fa fa-star"></i>
       <i class="fa fa-star"></i>
@@ -13,7 +13,7 @@
   </section>
 
   {{!-- Price --}}
-  <section class="{{unless @isDeatils 'h4'}}">
+  <section class="{{unless @isDeatils 'h6'}}">
     <del class="small text-black-50">{{currency @oprice}}</del>
     <i class="text-danger font-weight-bold">{{currency @cprice}}</i>
   </section>
@@ -21,7 +21,7 @@
   <div class="d-flex justify-content-between align-item-end">
     <button class="btn btn-info" type="button" {{on "click" this.addToCart}}>
       <i class="fa fa-shopping-cart-mr-1"></i>
-      Add to Cart
+      Add to Claim
     </button>
   </div>
   {{/if}}
