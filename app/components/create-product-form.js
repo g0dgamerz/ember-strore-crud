@@ -22,6 +22,7 @@ export default class CreateProductFormComponent extends Component {
       proimg:this.proimg
     });
     await p.save();
+    alert("inserted sucessfully")
     location.replace("http://localhost:4200/");
 
 

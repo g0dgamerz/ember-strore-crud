@@ -4,7 +4,8 @@ import { action } from '@ember/object';
 
 export default class CartController extends Controller {
   //@service shoppingCart; //from filename to use custom name refer below
-  @service('shopping-cart') cart; //and change in cart.hbs
+  @service('shopping-cart') cart; //and change in cart.
+  @service store;
   get subtotal() {
     return this.cart.itemList.reduce((acc, item) => {
       return acc + item.cprice * item.count;
@@ -19,6 +20,18 @@ export default class CartController extends Controller {
     return this.subtotal + this.tax;
   }
 
+  async createClaim(event) {
+    event.preventDefault();
+    const cla = await this.store.createRecord('claims', {
+      ClaimedDate: this.ClaimedDate,
+      ClaimValidStatus: false,
+      ssn: this.ssn,
+      amountClaimed: this.total,
+    });
+    await cla.save();
+    alert('inserted sucessfully');
+    location.replace('http://localhost:4200/');
+  }
   @action
   updateItemCount(item, event) {
     const count = event.target.value;

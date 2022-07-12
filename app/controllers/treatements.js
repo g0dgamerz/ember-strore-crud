@@ -1,7 +1,7 @@
 import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
 
-export default class UpdateProductFormComponent extends Component {
+export default class TreatementsComponent extends Component {
   @service store;
   pname = '';
   descriptions = '';
@@ -9,7 +9,7 @@ export default class UpdateProductFormComponent extends Component {
   cprice = '';
   proimg = '';
 
-  async handleCreate(event) {
+  async handleUpdate(event) {
     event.preventDefault();
     console.log(this.pname);
     const p = await this.store.createRecord('product', {
@@ -20,6 +20,5 @@ export default class UpdateProductFormComponent extends Component {
       proimg: this.proimg,
     });
     await p.save();
-    location.replace('http://localhost:4200/');
   }
 }

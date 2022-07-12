@@ -71,6 +71,7 @@
     "edition": "octane"
   },
   "dependencies": {
+    "ember-cli-chart": "^3.7.2",
     "jquery": "^3.6.0"
   }
 }

@@ -1,9 +1,9 @@
-<GeneralContainer>
+<GeneralAdminContainer>
   <h2 style="margin: 2% 5% 5%;"> Create New Treatement Information</h2>
 
 <form onsubmit={{action this.handleCreate}}>
   <div class="form-group-row">
-    <label for="cname" class="col-sm-2 col-form-label">Treatement Name</label>
+    <label for="cname" class="col-sm-3 col-form-label">Treatement Name</label>
     <Input @type="text" id="pname" @value={{this.pname}} class="form-control" />
   </div>
   <div class="form-group-row">
@@ -19,10 +19,10 @@
      <Input @type="text" @value={{this.cprice}} class="form-control" />
   </div>
     <div class="form-group-row">
-    <label for="proimg" class="col-sm-2 col-form-label">Treatement Image</label>
+    <label for="proimg" class="col-sm-3 col-form-label">Treatement Image</label>
      <Input @type="text" @value={{this.proimg}} class="form-control" />
   </div>
   <button type="submit" class="btn btn-primary mt-4">Create Product</button>
 </form>
 <script>var jqr=require('jquery')</script>
-</GeneralContainer>
+</GeneralAdminContainer>

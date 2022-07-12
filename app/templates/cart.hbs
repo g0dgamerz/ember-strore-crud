@@ -24,6 +24,7 @@
     <input type="number" class="ml-auto" value={{item.count}} {{on "input" (fn this.updateItemCount item)}}>
   </div>
   {{/each}}
+
   <section class="w-50 ml-auto text-right mb-5">
     <div class="row">
       <span class="col">Subtotal</span>
@@ -38,9 +39,22 @@
       <span class="col">{{currency this.total }}</span>
     </div>
   </section>
+  <form onsubmit={{action this.createClaim}}>
+    <div class="form-group-row">
+    <label for="claimedDate" class="col-sm-2 col-form-label">Claimed Date</label>
+    <Input @type="date" placeholder="2022/2/12" @value={{this.ClaimedDate}} class="form-control" />
+    </div>
+    <div class="form-group-row">
+    <label for="ssn" class="col-sm-3 col-form-label">Social Security Number</label>
+    <Input @type="text" placeholder="32424235" @value={{this.ssn}} class="form-control" />
+    </div>
 
-  <button type="button" class="btn btn-success float-right">
+    <Input @type="hidden" @value={{this.total}} class="form-control" />
+
+
+  <button type="submit" class="btn btn-success float-right mt-3">
     Claim Now
   </button>
+  </form>
 </main>
 </GeneralContainer>
