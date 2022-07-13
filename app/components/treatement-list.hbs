@@ -22,7 +22,7 @@
         <td scope="row">{{t.pname}}</td>
         <td>{{t.oprice}}</td>
         <td>{{t.id}}</td>
-        <td><LinkTo @route="admin.editpro" @model={{t}}>edit</LinkTo><i class="fa fa-pencil-square-o" aria-hidden="true"></i> <button type="button" onclick={{action this.deleteProduct t}}>delete</button><i class="fa fa-trash-o" aria-hidden="true"></i></td>
+        <td><LinkTo @route="admin.editpro" @model={{t.id}}>edit</LinkTo><i class="fa fa-pencil-square-o" aria-hidden="true"></i> <button type="button" onclick={{action this.deleteProduct t}}>delete</button><i class="fa fa-trash-o" aria-hidden="true"></i></td>
       </tr>
       {{/each}}
 

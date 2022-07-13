@@ -10,13 +10,13 @@ Router.map(function () {
   this.route('productdetail', { path: '/product/:pid' });
   this.route('not-found', { path: '/*path' });
   this.route('cart', { path: 'shopping-cart' });
-  this.route('productupdate', { path: '/getproductupdate/:pid' });
+  this.route('productupdate', { path: '/getproductupdate/:id' });
   this.route('admin', function () {
     this.route('index');
     this.route('createproduct');
     this.route('treatements');
-    this.route('treatements', { path: 'treatements/:id' });
+    // this.route('treatements', { path: 'treatements/:id' });
     this.route('claims');
-    this.route('editpro', { path: '/:id' });
+    this.route('editpro', { path: 'treatements/:id' });
   });
 });
