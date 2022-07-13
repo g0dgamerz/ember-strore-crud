@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\adapters",
+    "\\app\\components",
+    "\\app\\controllers",
+    "\\app\\models",
+    "\\app\\routes",
+    "\\app\\routes\\admin",
+    "\\app\\serializers",
+    "\\app\\templates"
+  ],
+  "SelectedNode": "\\app\\components\\create-product-form.js",
+  "PreviewInSolutionExplorer": false
+}

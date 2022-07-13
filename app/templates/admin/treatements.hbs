@@ -6,28 +6,32 @@
 </LinkTo>
 <div class="table-responsive">
   <table class="table mt-2">
-  <caption>List of Treatements</caption>
-  <thead>
-    <tr>
-      <th scope="col">Image</th>
-      <th scope="col">Treatement Name</th>
-      <th scope="col">Previous Price</th>
-      <th scope="col">Current Price</th>
-      <th scope="col">Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-{{#each @product as |product|}}
-    <tr>
-      <td><img src={{product.proimg}} /></td>
-      <td scope="row">Baby party waer</td>
-      <td>2000</td>
-      <td>1000</td>
-      <td>Edit Delete</td>
-    </tr>
-{{/each}}
-  </tbody>
-</table>
+    <caption>List of Treatements</caption>
+    <thead>
+      <tr>
+        <th scope="col">Image</th>
+        <th scope="col">Treatement Name</th>
+        <th scope="col">Previous Price</th>
+        <th scope="col">Current Price</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each @model as |t|}}
+      <tr>
+        <td><img src="{{t.proimg}}" width="70"/></td>
+        <td scope="row">{{t.pname}}</td>
+        <td>{{t.oprice}}</td>
+        <td>{{t.cprice}}</td>
+        <td><i class="fa fa-pencil-square-o" aria-hidden="true"></i> <i class="fa fa-trash-o" aria-hidden="true"></i></td>
+      </tr>
+      {{/each}}
+
+    </tbody>
+  </table>
+  {{#each @model as |treatement|}}
+  {{treatement.pname}}
+  {{/each}}
 </div>
   </div>
 </GeneralAdminContainer>

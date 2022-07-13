@@ -1,31 +1,39 @@
 <GeneralAdminContainer>
- <div style="margin-top: 150px;">
-  <h1>Claims</h1>
 
-<div class="table-responsive">
-  <table class="table mt-2">
-  <caption>List of Claims</caption>
-  <thead>
-    <tr>
-      <th scope="col">Claimed Date</th>
-      <th scope="col">Claim Valid Status</th>
-      <th scope="col">Social Security Number</th>
-      <th scope="col">Amount Claimed</th>
-      <th scope="col">Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-{{#each @model as |claim|}}
-    <tr>
-      <td><img src={{claim.ClaimedDate}} /></td>
-      <td scope="row">{{claim.ClaimValidStatus}}</td>
-      <td>{{claim.ssn}}</td>
-      <td>{{claim.amountClaimed}}</td>
-      <td>Edit Delete</td>
-    </tr>
-{{/each}}
-  </tbody>
-</table>
-</div>
-  </div>
+  <div class="table-responsive">
+    <div style="margin-top: 150px;margin-left:80px">
+      <h1>Claims</h1>
+
+      <div class="table-responsive">
+        <table class="table mt-2">
+          <caption>List of Claims</caption>
+          <thead>
+            <tr>
+              <th scope="col">Claimed Date</th>
+              <th scope="col">Claim Valid Status</th>
+              <th scope="col">Social Security Number</th>
+              <th scope="col">Amount Claimed</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each @model as |claim|}}
+            <tr>
+              <td>{{claim.ClaimedDate}}</td>
+              <td scope="row">{{claim.ClaimValidStatus}}</td>
+              <td>{{claim.ssn}}</td>
+              <td>{{claim.amountClaimed}}</td>
+              <td>Edit Delete</td>
+            </tr>
+            {{/each}}
+
+          </tbody>
+        </table>
+
+        {{#each @model as |c|}}
+        {{c.ssn}}
+        {{/each}}
+      </div>
+    </div>
+    </div>
 </GeneralAdminContainer>

@@ -3,6 +3,7 @@ import { inject as service } from '@ember/service';
 
 export default class TreatementsComponent extends Component {
   @service store;
+  
   pname = '';
   descriptions = '';
   oprice = '';

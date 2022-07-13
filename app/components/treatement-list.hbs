@@ -1,0 +1,45 @@
+
+
+<li>
+  <LinkTo @route="productdetail" @model={{@product.id}} class="product">
+    <Product::Image @src={{@product.proimg}} @toggleZoom={{this.toggleZoom}} />
+    <Product::Details @pname={{@product.pname}} @oprice={{@product.oprice}} @cprice={{@product.cprice}} />
+  </LinkTo>
+
+</li>
+
+
+<!--<div style="margin-top: 150px;">
+  <h1>Treatements</h1>
+  <LinkTo @route="admin.createproduct">
+    <button type="button" class="btn btn-primary"><i class="fa fa-plus"></i> Create Treatement</button>
+  </LinkTo>
+  <div class="table-responsive">
+    <table class="table mt-2">
+      <caption>List of Treatements</caption>
+      <thead>
+        <tr>
+          <th scope="col">Image</th>
+          <th scope="col">Treatement Name</th>
+          <th scope="col">Previous Price</th>
+          <th scope="col">Current Price</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each @model as |product|}}
+        <tr>
+          <td><img src={{product.proimg}} /></td>
+          <td scope="row">Baby party waer</td>
+          <td>2000</td>
+          <td>1000</td>
+          <td>Edit Delete</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+</div>
+</div>-->

@@ -1,8 +1,8 @@
 import Model, { attr } from '@ember-data/model';
 
 export default class ClaimsModel extends Model {
-  @attr ClaimedDate;
+  @attr('string') ClaimedDate;
   @attr ClaimValidStatus;
-  @attr ssn;
-  @attr amountClaimed;
+  @attr('string') ssn;
+  @attr('number') amountClaimed;
 }

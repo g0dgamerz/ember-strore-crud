@@ -22,13 +22,13 @@ export default class CartController extends Controller {
 
   async createClaim(event) {
     event.preventDefault();
-    const cla = await this.store.createRecord('claims', {
+    const claim = await this.store.createRecord('claims', {
       ClaimedDate: this.ClaimedDate,
       ClaimValidStatus: false,
       ssn: this.ssn,
       amountClaimed: this.total,
     });
-    await cla.save();
+    await claim.save();
     alert('inserted sucessfully');
     location.replace('http://localhost:4200/');
   }
