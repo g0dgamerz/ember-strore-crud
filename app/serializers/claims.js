@@ -13,10 +13,9 @@ export default class ClaimsSerializer extends RESTSerializer {
       serializedData[name] = snapshot.attr(name);
     });
     return serializedData;
-    console.log(serializedData);
   }
   normalizeResponse(store, primaryModelClass, payload, id, requestType) {
-    payload = { claims:payload };
+    payload = { claims: payload };
     console.log(payload);
     return super.normalizeResponse(
       store,

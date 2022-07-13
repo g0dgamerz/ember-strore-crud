@@ -5,6 +5,7 @@ export default class AdminTreatementsRoute extends Route {
   @service store;
 
   model() {
+    console.log(this.store.findAll('product'));
     return this.store.findAll('product');
   }
 }

@@ -19,6 +19,7 @@
           <tbody>
             {{#each @model as |claim|}}
             <tr>
+              <td>Hello world</td>
               <td>{{claim.ClaimedDate}}</td>
               <td scope="row">{{claim.ClaimValidStatus}}</td>
               <td>{{claim.ssn}}</td>
@@ -27,6 +28,9 @@
             </tr>
             {{/each}}
 
+      {{#each @claims as |z|}}
+      {{z.ssn}}
+      {{/each}}
           </tbody>
         </table>
 

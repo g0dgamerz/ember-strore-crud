@@ -1,37 +1,3 @@
 <GeneralAdminContainer>
- <div style="margin-top: 150px;">
-  <h1>Treatements</h1>
-<LinkTo @route="admin.createproduct">
-<button type="button" class="btn btn-primary"><i class="fa fa-plus"></i> Create Treatement</button>
-</LinkTo>
-<div class="table-responsive">
-  <table class="table mt-2">
-    <caption>List of Treatements</caption>
-    <thead>
-      <tr>
-        <th scope="col">Image</th>
-        <th scope="col">Treatement Name</th>
-        <th scope="col">Previous Price</th>
-        <th scope="col">Current Price</th>
-        <th scope="col">Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each @model as |t|}}
-      <tr>
-        <td><img src="{{t.proimg}}" width="70"/></td>
-        <td scope="row">{{t.pname}}</td>
-        <td>{{t.oprice}}</td>
-        <td>{{t.cprice}}</td>
-        <td><i class="fa fa-pencil-square-o" aria-hidden="true"></i> <i class="fa fa-trash-o" aria-hidden="true"></i></td>
-      </tr>
-      {{/each}}
-
-    </tbody>
-  </table>
-  {{#each @model as |treatement|}}
-  {{treatement.pname}}
-  {{/each}}
-</div>
-  </div>
+<TreatementList @product={{this.model}}/>
 </GeneralAdminContainer>
