@@ -1,10 +1,10 @@
- <div style="margin-top: 150px;">
+ <div style="margin-top: 150px;margin-left:15rem">
   <h1>Treatements</h1>
 <LinkTo @route="admin.createproduct">
-<button type="button" class="btn btn-primary"><i class="fa fa-plus"></i> Create Treatement</button>
+<button type="button" class="btn btn-danger"><i class="fa fa-plus"></i> Create Treatement</button>
 </LinkTo>
 <div class="table-responsive">
-  <table class="table mt-2">
+  <table class="table mt-2" style="width:90%;">
     <caption>List of Treatements</caption>
     <thead>
       <tr>
@@ -22,7 +22,7 @@
         <td scope="row">{{t.pname}}</td>
         <td>{{t.oprice}}</td>
         <td>{{t.id}}</td>
-        <td><LinkTo @route="admin.editpro" @model={{t.id}}>edit</LinkTo><i class="fa fa-pencil-square-o" aria-hidden="true"></i> <button type="button" onclick={{action this.deleteProduct t}}>delete</button><i class="fa fa-trash-o" aria-hidden="true"></i></td>
+        <td><LinkTo @route="admin.editpro" @model={{t.id}}><button type="button" class="btn btn-success"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit</button></LinkTo> <button class="btn btn-danger" type="button" onclick={{action this.deleteProduct t}}><i class="fa fa-trash-o" aria-hidden="true"></i>Delete</button></td>
       </tr>
       {{/each}}
 

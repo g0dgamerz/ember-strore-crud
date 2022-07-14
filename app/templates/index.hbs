@@ -1,14 +1,19 @@
 
 <GeneralContainer>
-<h2 style="margin: 2% 5% 5%;"> Choose your Treatement and Claim</h2>
-
-<div class="serv">
-  <ul>
+<div>
+<div class="jumbotron">
+  <h1 class="display-4">Choose your Treatement and Claim</h1>
+  <p class="lead">Choose the Treatement Click on the claim and add you Claim.</p>
+  <hr class="my-4">
+  <p>Best place to find out your Claim validity status</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+</div>
+<div class="pattas">
 {{#each @model as |product|}}
-
 <ProductList @product={{product}}/>
-
 {{/each}}
-</ul>
+</div>
+
+
 </div>
 </GeneralContainer>

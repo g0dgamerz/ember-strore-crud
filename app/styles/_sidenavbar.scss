@@ -1,0 +1,61 @@
+
+.sidenavb{
+  background: rgb(26, 24, 140);
+  height: 100%;
+  width: 40rem;
+
+}
+ul{
+  li{
+    color: yellow;
+  }
+}
+.dec
+{
+  color: brown;
+}
+.cussidebar{
+position: absolute;
+top: 10;
+left: 0;
+width: 40rem;
+height: 100%;
+margin-top: 6rem;
+background: rgb(26, 24, 140);
+box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 50rem;
+  background-color: rgb(26, 24, 140);
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+li{
+  border: 2rem;
+  height: 30rem;
+  width: 50rem;
+  color: aquamarine;
+  border-color: black;
+}
+
+
+#navbaaar {
+  ul {
+    li {
+      color: #000;
+    }
+  }
+}
+h3{
+  color: rgb(2, 191, 34);
+}
+
+
+
+
+
+

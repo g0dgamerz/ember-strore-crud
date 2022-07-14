@@ -1,28 +1,29 @@
 <GeneralAdminContainer>
-  <h2 style="margin: 2% 5% 5%;"> Create New Treatement Information</h2>
-
+  <div>
+<h2> Create New Treatement Information</h2>
 <form onsubmit={{action this.handleCreate}}>
   <div class="form-group-row">
-    <label for="cname" class="col-sm-3 col-form-label">Treatement Name</label>
+    <label for="cname" class="col-sm-5 col-form-label">Treatement Name</label>
     <Input @type="text" id="pname" @value={{this.pname}} class="form-control" />
   </div>
   <div class="form-group-row">
-    <label for="descriptions" class="col-sm-3 col-form-label">Treatement Description</label>
+    <label for="descriptions" class="col-sm-5 col-form-label">Treatement Description</label>
      <Input @type="text" @value={{this.descriptions}} class="form-control" />
   </div>
     <div class="form-group-row">
-    <label for="oprice" class="col-sm-2 col-form-label">Previous Price</label>
+    <label for="oprice" class="col-sm-5 col-form-label">Previous Price</label>
      <Input @type="text" @value={{this.oprice}} class="form-control" />
   </div>
     <div class="form-group-row">
-    <label for="cname" class="col-sm-2 col-form-label">Current Price</label>
+    <label for="cname" class="col-sm-5 col-form-label">Current Price</label>
      <Input @type="text" @value={{this.cprice}} class="form-control" />
   </div>
     <div class="form-group-row">
-    <label for="proimg" class="col-sm-3 col-form-label">Treatement Image</label>
+    <label for="proimg" class="col-sm-5 col-form-label">Treatement Image</label>
      <Input @type="text" @value={{this.proimg}} class="form-control" />
   </div>
   <button type="submit" class="btn btn-primary mt-4">Create Product</button>
 </form>
+</div>
 <script>var jqr=require('jquery')</script>
 </GeneralAdminContainer>

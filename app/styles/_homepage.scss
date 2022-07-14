@@ -1,17 +1,67 @@
+#sb ul li {
+  background-color: #F2F2F2;
+  color: #404040;
+}
+body{
+  background-color: whitesmoke;
+}
 .navbar{
   min-height: 80px;
+  color: aqua;
 }
-.serv ul {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 15px;
+.chart{
+  margin-top: 100px;
+  width: 500px;
+
 }
 
-.serv ul li {
-  list-style: none;
-  flex: 0 0 33.333333%;
-  padding-left: 20px;
+.sbs{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-auto-rows: auto;
+grid-gap: 1rem;
 }
+li{
+  background-color: rgb(26, 24, 140);
+}
+
+.claimcount{
+  margin-right: 200px;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  color: whitesmoke;
+  text-decoration: brown;
+  text-align: center;
+}
+.cb{
+  padding:4.25rem;
+}
+.bg-b {
+  background-color: rgb(26, 24, 140);
+  &:hover {
+    color:rgb(26, 24, 140);
+    background: yellow;
+  }
+
+}
+.navcolor{
+  background-color: rgb(26, 24, 140);
+}
+.snc{
+  background-color: rgb(26, 24, 140);
+}
+// .serv ul {
+//   display: flex;
+//   flex-wrap: wrap;
+//   padding-left: 15px;
+// }
+
+// .serv ul li {
+//   list-style: none;
+//   flex: 0 0 33.333333%;
+//   padding-left: 20px;
+// }
 .cart-link {
   right: 40px;
   top:7px;
