@@ -16,7 +16,7 @@ Router.map(function () {
     this.route('createproduct');
     this.route('treatements');
     // this.route('treatements', { path: 'treatements/:id' });
-    this.route('claims');
+    this.route('claim');
     this.route('editpro', { path: 'treatements/:id' });
   });
 });

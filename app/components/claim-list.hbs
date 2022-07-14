@@ -1,1 +1,39 @@
-{{yield}}
+<div class="table-responsive">
+    <div style="margin-top: 150px;margin-left:80px">
+      <h1>Claims</h1>
+
+      <div class="table-responsive">
+        <table class="table mt-2">
+          <caption>List of Claims</caption>
+          <thead>
+            <tr>
+              <th scope="col">Claimed Date</th>
+              <th scope="col">Claim Valid Status</th>
+              <th scope="col">Social Security Number</th>
+              <th scope="col">Amount Claimed</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each @claim as |c|}}
+            <tr>
+              <td>Hello world</td>
+              <td>{{c.ClaimedDate}}</td>
+              <td scope="row">{{c.ClaimValidStatus}}</td>
+              <td>{{c.ssn}}</td>
+              <td>{{c.amountClaimed}}</td>
+              <td>Edit Delete</td>
+            </tr>
+            {{/each}}
+
+
+          </tbody>
+        </table>
+        test
+      {{@claims}}
+        {{#each @claims as |c|}}
+        {{c.ssn}}
+        {{/each}}
+      </div>
+    </div>
+    </div>

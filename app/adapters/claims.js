@@ -25,6 +25,7 @@ export default class ClaimsAdapter extends RESTAdapter {
   }
   createRecord(store, type, snapshot) {
     let data = {};
+    console.log(snapshot);
     let serializer = store.serializerFor(type.modelName);
     serializer.serializeIntoHash(data, type, snapshot);
 
